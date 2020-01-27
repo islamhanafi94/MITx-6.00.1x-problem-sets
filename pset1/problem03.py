@@ -11,7 +11,7 @@ In the case of ties, print the first substring.
 For example, if s = 'abcbcd', then your program should print
 Longest substring in alphabetical order is: abc         
 """
-s = 'abcdefghijklmnopqrstuvwxyz'
+s = 'abcabzefg'
 savedRecords = []
 startIndex = 0
 count = 0
@@ -29,3 +29,7 @@ savedRecords.append(s[startIndex:startIndex+count+1])
 
 print('Longest substring in alphabetical order is: ', max(savedRecords,key=len))
 
+# finding all max number of sequential characeters
+for item in savedRecords:
+    if len(item) == len(max(savedRecords, key=len)):
+        print(item) 
